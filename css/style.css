@@ -1,0 +1,278 @@
+*,
+*::after,
+*::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: inherit; }
+
+html {
+  font-size: 62.5%;
+  height: 100vh;
+  width: 100%; }
+
+body {
+  box-sizing: border-box;
+  background-image: url(../media/circuits_white.svg);
+  background-repeat: no-repeat;
+  background-position: bottom right;
+  background-size: cover;
+  background-attachment: fixed;
+  background-color: #0e0e46;
+  font-family: "Quicksand", sans-serif;
+  height: 100%;
+  width: 100%;
+  color: white; }
+
+.main-container {
+  height: 100%;
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  flex-flow: row wrap;
+  position: relative;
+  align-content: flex-start;
+  font-size: 1.5rem;
+  flex-shrink: 1; }
+
+.panel {
+  padding: 3rem;
+  flex-basis: 50%;
+  width: auto;
+  height: 100%;
+  display: flex;
+  flex-direction: column; }
+  @media only screen and (max-width: 900px) {
+    .panel {
+      flex-basis: auto;
+      flex-direction: column;
+      align-items: center;
+      width: 100%;
+      height: auto; } }
+  @media only screen and (max-width: 900px) {
+    .panel-left {
+      order: 1;
+      padding-top: 0; } }
+  @media only screen and (max-width: 900px) {
+    .panel-right {
+      order: 0; } }
+
+.menu-box {
+  align-self: flex-end;
+  margin-right: 3rem; }
+  @media only screen and (max-width: 900px) {
+    .menu-box {
+      align-self: stretch;
+      margin-right: 0; } }
+  .menu-box ul {
+    text-align: center;
+    text-transform: uppercase; }
+    .menu-box ul li {
+      margin-left: 2rem;
+      display: inline-block;
+      font-size: 2rem;
+      padding: 0 1rem 0 1rem;
+      transition: all .7s ease-in-out; }
+      @media only screen and (max-width: 900px) {
+        .menu-box ul li {
+          padding: 1rem 0 1rem 0;
+          background-color: black;
+          border: 1px solid #0e0e46;
+          width: 100%;
+          margin-left: 0; } }
+      .menu-box ul li a:link, .menu-box ul li a:visited, .menu-box ul li p {
+        padding: 1rem 2rem 1rem 2rem;
+        color: white;
+        text-decoration: none; }
+      .menu-box ul li:hover {
+        transition: all .7s ease-in-out;
+        background-color: #3556b1;
+        color: darkblue;
+        background-position: 100% 100%; }
+
+.primary-heading-box {
+  font-size: 3rem;
+  padding-bottom: 2rem;
+  border-bottom: 1px solid white; }
+  @media only screen and (max-width: 900px) {
+    .primary-heading-box {
+      display: none; } }
+  .primary-heading-box .primary-heading-text {
+    font-weight: 400; }
+  .primary-heading-box .secondary-heading-text {
+    color: teal; }
+
+.main-textbox {
+  font-size: 2rem;
+  margin: auto; }
+  @media only screen and (max-width: 900px) {
+    .main-textbox {
+      font-size: 1.5rem; } }
+  .main-textbox-container {
+    padding: 2rem; }
+    .main-textbox-container .main-heading {
+      margin-bottom: 2rem; }
+    .main-textbox-container .main-textbox-content {
+      overflow: hidden;
+      display: flex;
+      flex-direction: column; }
+      .main-textbox-container .main-textbox-content img {
+        align-self: center;
+        max-width: 100%;
+        margin: 2rem 0 2rem 0; }
+      .main-textbox-container .main-textbox-content .main-text {
+        overflow: auto;
+        white-space: pre-wrap; }
+
+.schedule-textbox {
+  align-self: center;
+  margin: auto;
+  font-size: 2rem; }
+  .schedule-textbox-container {
+    padding: 3rem; }
+    @media only screen and (max-width: 900px) {
+      .schedule-textbox-container {
+        padding: 3rem 0 0 0; } }
+    .schedule-textbox-container .schedule-heading {
+      text-transform: uppercase;
+      font-weight: 400;
+      margin-bottom: 2rem; }
+    .schedule-textbox-container .schedule-table {
+      border: 1px solid white;
+      border-collapse: collapse;
+      width: 100%;
+      text-align: left; }
+      .schedule-textbox-container .schedule-table tr, .schedule-textbox-container .schedule-table td, .schedule-textbox-container .schedule-table th {
+        border: 1px solid white;
+        padding: 1rem 4rem 1rem 1rem; }
+
+.cover {
+  position: absolute;
+  background-color: rgba(0, 0, 0, 0.8);
+  width: 100%;
+  height: 100%;
+  z-index: 99;
+  display: flex;
+  visibility: hidden; }
+  @media only screen and (max-width: 900px) {
+    .cover {
+      font-size: 3rem;
+      visibility: visible;
+      position: static;
+      width: auto;
+      height: auto;
+      background: none; } }
+  .cover .about-textbox {
+    padding: 3rem;
+    display: block;
+    margin: auto auto;
+    background-color: white;
+    width: 70%;
+    color: black; }
+    @media only screen and (max-width: 900px) {
+      .cover .about-textbox {
+        width: auto;
+        background: none;
+        color: white;
+        visibility: visible;
+        padding-bottom: 0; } }
+    .cover .about-textbox .about-heading {
+      font-size: 4rem;
+      font-weight: 400;
+      margin-bottom: 2rem;
+      text-transform: uppercase; }
+      @media only screen and (max-width: 900px) {
+        .cover .about-textbox .about-heading {
+          font-size: 3rem; } }
+    .cover .about-textbox .about-info {
+      font-size: 2.5rem;
+      white-space: pre-wrap; }
+      @media only screen and (max-width: 900px) {
+        .cover .about-textbox .about-info {
+          font-size: 1.5rem; } }
+
+#about {
+  cursor: pointer; }
+  @media only screen and (max-width: 900px) {
+    #about {
+      display: none;
+      padding: 0 0; } }
+
+#contact {
+  cursor: pointer; }
+
+.animation-movein1 {
+  animation-name: fadeinRight;
+  animation-duration: 5s;
+  animation-fill-mode: forwards;
+  opacity: 0; }
+
+.animation-movein2 {
+  animation-name: fadeinRight;
+  animation-delay: .3s;
+  animation-duration: 5s;
+  animation-fill-mode: forwards;
+  opacity: 0; }
+
+.animation-movein3 {
+  animation-name: fadeinRight;
+  animation-delay: .6s;
+  animation-duration: 5s;
+  animation-fill-mode: forwards;
+  opacity: 0; }
+
+.animation-movein4 {
+  animation-name: fadeinRight;
+  animation-delay: .9s;
+  animation-duration: 5s;
+  animation-fill-mode: forwards;
+  opacity: 0; }
+
+.animation-movein5 {
+  animation-name: fadeinRight;
+  animation-delay: 1.2s;
+  animation-duration: 5s;
+  animation-fill-mode: forwards;
+  opacity: 0; }
+
+.animation-movein6 {
+  animation-name: fadeinRight;
+  animation-delay: 1.5s;
+  animation-duration: 5s;
+  animation-fill-mode: forwards;
+  opacity: 0; }
+
+.animation-fadein {
+  animation-name: fadein;
+  animation-delay: 6s;
+  animation-duration: .7s;
+  animation-fill-mode: forwards; }
+
+@keyframes fadeinRight {
+  0% {
+    opacity: 0;
+    transform: translateX(40rem); }
+  /*
+    30% {
+        opacity: 1;
+        transform: translateX(4rem);
+    }
+*/
+  70% {
+    transform: translateX(0rem); }
+  100% {
+    opacity: 1;
+    transform: translateX(-20rem); } }
+
+@keyframes fadein {
+  0% {
+    visibility: hidden;
+    opacity: 0; }
+  100% {
+    visibility: visible;
+    opacity: .75; } }
+
+@keyframes bumpLeft {
+  0% {
+    transform: translateX(0); }
+  100% {
+    transform: translateX(-3rem); } }
